@@ -1,0 +1,15 @@
+[
+	{
+		"name": "Iraklis Alexopolous",
+		"age": 32,
+		"hobby": "Coding"
+	}, {
+		"name": "Christian McAdam",
+		"age": 18,
+		"hobby": "Music"
+	}, {
+		"name": "Byron Koller",
+		"age": 11,
+		"hobby": "Living"
+	}
+]

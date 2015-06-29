@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>AngularJS: Inheritance</title>
+		<script src="bower_components/angular/angular.min.js"></script>
+		<script src="bower_components/angular-resource/angular-resource.min.js"></script>
+		<script src="bower_components/angular-route/angular-route.min.js"></script>
+		<script src="js/app.js"></script>
+		<style>
+			html, body {
+				margin: 0;
+				padding: 0;
+				font-family: monospace;
+				font-size: 18px;
+				color: #444;
+			}
+			body {
+				padding: 50px;
+			}
+			ol {
+				margin-top: 0;
+			}
+			input {
+				font-size: 18px;
+				padding: 10px;
+				border: 3px dotted #ccc;
+				outline: none;
+			}
+			button {
+				display: block;
+				background-color: #DFDFDF;
+				font-size: 18px;
+				margin: 9px 0;
+				padding: 10px;
+				border: none;
+				outline: none;
+			}
+		</style>
+	</head>
+	<body ng-app="mainApp">
+		<div ng-controller="mainAppCtrl" ng-init="run()">
+			<h2>Hello world, parent.</h2>
+			<ol ng-if="ready">
+				<li ng-repeat="(key, person) in people.slice(0, numRecords) track by $index">
+					{{::person.name}} is {{::person.age}}, and enjoys {{::person.hobby}}.
+				</li>
+			</ol>
+			<p>Number of people to show:</p>
+			<input type="text" ng-model="numRecords">
+			<button ng-click="doAdd()">Add New Person</button>
+		</div>
+	
+		<div ng-controller="childAppCtrl" ng-init="run()">
+			<h2>Hello world, child.</h2>
+			<ol ng-if="ready">
+				<li ng-repeat="(key, person) in people.slice(0, numRecords) track by $index">
+					{{::person.name}} is {{::person.age}}, and enjoys {{::person.hobby}}.
+				</li>
+			</ol>
+			<p>Number of people to show:</p>
+			<input type="text" ng-model="numRecords">
+			<button ng-click="doAdd()">Add New Person</button>
+		</div>
+
+	</body>
+</html>
