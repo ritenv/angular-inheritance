@@ -1,0 +1,6 @@
+{
+    "preset": "airbnb",
+    "validateLineBreaks": "LF",
+    "validateIndentation": 2,
+    "excludeFiles": ["node_modules/**"]
+}
